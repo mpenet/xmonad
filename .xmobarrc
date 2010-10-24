@@ -3,16 +3,16 @@ Config { font = "-*-fixed-*-*-*-*-12-*-*-*-*-*-*-u"
        , fgColor = "grey"
        , position = TopW L 100
        , lowerOnStart = True
-       , commands = [ Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
-                    , Run Memory ["-t","Mem: <usedratio>%"] 10
-                    , Run Swap [] 10
+       , commands = [ Run MultiCpu ["-t","Cpu: <total0> <total1> <total2> <total3>","-L","3","-H","75","--normal","green","--high","red"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 100
+                    , Run Swap [] 100
                     , Run Network "wlan0" ["-L","0","-H","32","--normal","green","--high","red"] 10
                     , Run Network "eth0" ["-L","0","-H","32","--normal","green","--high","red"] 10
                     , Run Battery ["-L","25","-H","75","--low","#red" ,"--high","green"] 600
-                    , Run Date "%a %b %_d %H:%M" "date" 10
+                    , Run Date "%a %b %_d %H:%M" "date" 60
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %eth0% * %wlan0% | %cpu% %memory% %swap% | %battery%  <fc=#ee9a00>%date%</fc>"
+       , template = "%StdinReader% }{%eth0% %wlan0% | %multicpu% %memory% %swap% | %battery%  <fc=#ee9a00>%date%</fc>"
        }
