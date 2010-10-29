@@ -19,5 +19,6 @@ main = do
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 50
                         }
+        , terminal = "urxvt"
         , modMask = mod4Mask
         }
