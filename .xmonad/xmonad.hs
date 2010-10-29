@@ -2,7 +2,6 @@ import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
-import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 
 myManageHook = composeAll
@@ -19,6 +18,8 @@ main = do
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 50
                         }
+        , normalBorderColor = "#333333"
+        , focusedBorderColor = "#00ff00"
         , terminal = "urxvt"
         , modMask = mod4Mask
         }
