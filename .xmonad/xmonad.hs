@@ -19,7 +19,7 @@ main = do
                         , ppTitle = xmobarColor "green" "" . shorten 50
                         }
         , normalBorderColor = "#333333"
-        , focusedBorderColor = "#00ff00"
+        , focusedBorderColor = "#666666"
         , terminal = "urxvt"
         , modMask = mod4Mask
         }
