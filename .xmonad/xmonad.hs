@@ -2,6 +2,8 @@ import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
+import XMonad.Util.EZConfig
+import XMonad.Actions.NoBorders
 import System.IO
 
 myManageHook = composeAll
@@ -23,3 +25,6 @@ main = do
         , terminal = "urxvt"
         , modMask = mod4Mask
         }
+        `additionalKeysP`
+                 [("M-b", withFocused toggleBorder)
+                 ]
