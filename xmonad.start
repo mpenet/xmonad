@@ -1,6 +1,8 @@
 #!/bin/bash
 
-trayer --edge top --align right --width 5 --height 13 --padding 1 --alpha 255  --transparent true &
+xrandr --output LVDS1 --primary &
+
+trayer --edge top --align right --widthtype request --height 13 --padding 1 --alpha 255  --transparent true &
 
 nm-applet --sm-disable &
 
