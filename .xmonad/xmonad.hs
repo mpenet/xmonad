@@ -7,7 +7,8 @@ import XMonad.Actions.NoBorders
 import System.IO
 
 myManageHook = composeAll
-    [ className =? "Gimp"      --> doFloat
+    [ className =? "Gimp"            --> doFloat
+     ,className =? "Skype"      --> doFloat
     ]
 
 main = do

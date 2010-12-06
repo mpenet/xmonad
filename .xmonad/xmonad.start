@@ -1,7 +1,0 @@
-export WINDOW_MANAGER=xmonad
-gnome-session
-
-gconftool-2 -t string -s /desktop/gnome/sessions/required_components/windowmanager xmonad
-gconftool-2 -t string -s /desktop/gnome/applications/winow_manager/current xmonad
-
-xmonad &
