@@ -3,8 +3,8 @@
 
 # disable touchpad
 
-if xinput list-props 16 | grep "TouchPad"; then
-    xinput set-prop 16 125 0 &
+if xinput list | grep "TouchPad"; then
+    xinput --set-prop  "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 fi
 
 xrandr --output LVDS1 --primary &
