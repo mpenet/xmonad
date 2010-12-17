@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+# disable touchpad
+
+if xinput list | grep "TouchPad"; then
+    xinput --set-prop  "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
+fi
+
 xrandr --output LVDS1 --primary &
 
 trayer --edge top --align right --widthtype request --height 13 --padding 1 --alpha 255  --transparent true &
