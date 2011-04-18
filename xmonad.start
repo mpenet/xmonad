@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# make sure emacsish keybinding is in use in gtk
+gconftool-2 --set /desktop/gnome/interface/gtk_key_theme Emacs --type string
 
 # disable touchpad
 

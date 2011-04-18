@@ -4,10 +4,11 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig
 import XMonad.Actions.NoBorders
+import XMonad.Layout.NoBorders
 import System.IO
 
 myManageHook = composeAll
-    [ className =? "Gimp"            --> doFloat
+    [ className =? "Gimp"       --> doFloat
      ,className =? "Skype"      --> doFloat
     ]
 
@@ -16,14 +17,14 @@ main = do
     xmonad $ defaultConfig
         { manageHook = manageDocks <+> myManageHook
                         <+> manageHook defaultConfig
-        , layoutHook = avoidStruts  $  layoutHook defaultConfig
+        , layoutHook = avoidStruts $ smartBorders $ layoutHook defaultConfig
         , logHook = dynamicLogWithPP $ xmobarPP
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 50
                         }
         , normalBorderColor = "#333333"
         , focusedBorderColor = "#666666"
-        , terminal = "urxvt"
+        , terminal = "gnome-terminal"
         , modMask = mod4Mask
         }
         `additionalKeysP`
