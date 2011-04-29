@@ -24,7 +24,7 @@ main = do
                         }
         , normalBorderColor = "#333333"
         , focusedBorderColor = "#666666"
-        , terminal = "gnome-terminal"
+        , terminal = "urxvt"
         , modMask = mod4Mask
         }
         `additionalKeysP`
