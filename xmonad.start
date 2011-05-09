@@ -2,6 +2,7 @@
 
 xrdb -merge ~/.Xresources
 
+
 # make sure emacsish keybinding is in use in gtk
 gconftool-2 --set /desktop/gnome/interface/gtk_key_theme Emacs --type string
 
@@ -9,6 +10,8 @@ gconftool-2 --set /desktop/gnome/interface/gtk_key_theme Emacs --type string
 if xinput list | grep "TouchPad"; then
     xinput --set-prop  "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 fi
+
+xsetroot -cursor_name left_ptr
 
 xrandr --output LVDS1 --primary &
 
