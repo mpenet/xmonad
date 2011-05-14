@@ -10,6 +10,7 @@ import System.IO
 myManageHook = composeAll
     [ className =? "Gimp"       --> doFloat
      ,className =? "Skype"      --> doFloat
+     ,className =? "Empathy"    --> doFloat
     ]
 
 main = do
