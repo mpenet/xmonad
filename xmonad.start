@@ -2,7 +2,6 @@
 
 xrdb -merge ~/.Xresources
 
-
 # make sure emacsish keybinding is in use in gtk
 gconftool-2 --set /desktop/gnome/interface/gtk_key_theme Emacs --type string
 
@@ -15,7 +14,7 @@ xsetroot -cursor_name left_ptr
 
 xrandr --output LVDS1 --primary &
 
-trayer --edge top --align right --widthtype request --height 13 --padding 1 --alpha 255  --transparent true &
+trayer --edge top --align right --height 13 --padding 0 --transparent true --alpha 0 --widthtype percent --width 5 --tint 0x2b2b2b  --distancefrom right --distance 1 --expand true &
 
 nm-applet --sm-disable &
 

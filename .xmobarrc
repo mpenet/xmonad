@@ -1,6 +1,6 @@
 Config { font = "-xos4-terminus-medium-r-normal-*-12-*-*-*-c-*-iso10646-1"
-       , bgColor = "black"
-       , fgColor = "grey"
+       , bgColor = "#2b2b2b"
+       , fgColor = "#8fb28f"
        , position = TopW L 95
        , lowerOnStart = True
        , commands = [ Run MultiCpu ["-t","Cpu: <total0> <total1>","-L","3","-H","75","--normal","green","--high","red"] 10
