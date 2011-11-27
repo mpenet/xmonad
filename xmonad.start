@@ -10,7 +10,7 @@ if xinput list | grep "TouchPad"; then
     xinput --set-prop  "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 fi
 
-xsetroot -cursor_name left_ptr
+xsetroot -cursor_name left_ptr -solid black
 
 xrandr --output LVDS1 --primary &
 
@@ -19,7 +19,3 @@ trayer --edge top --align right --height 13 --padding 0 --transparent true --alp
 nm-applet --sm-disable &
 
 exec xmonad
-
-
-
-
