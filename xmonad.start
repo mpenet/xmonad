@@ -12,9 +12,9 @@ fi
 
 xsetroot -cursor_name left_ptr -solid black
 
-xrandr --output LVDS1 --primary &
+xrandr --output DP3 --off --output DP2 --off --output DP1 --off --output HDMI3 --off --output HDMI2 --off --output HDMI1 --mode 1680x1050 --pos 0x0 --rotate left --output LVDS1 --mode 1440x900 --pos 1050x368 --rotate normal --output VGA1 --off
 
-trayer --edge top --align right --height 13 --padding 0 --transparent true --alpha 0 --widthtype percent --width 5 --tint 0x2b2b2b  --distancefrom right --distance 1 --expand true &
+trayer --edge top --align right --height 13 --padding 0 --transparent true --alpha 0 --widthtype percent --width 5 --tint 0x2b2b2b  --distancefrom right --distance 1 --expand true --monitor 1 &
 
 nm-applet --sm-disable &
 
