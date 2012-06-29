@@ -34,9 +34,9 @@ xterm*savesLines: 10000
 URxvt.background: COLOR_BG
 URxvt.foreground: COLOR_FG
 URxvt.termname: rxvt
+URxvt*scrollBar: false
 ## URxvt*scrollBar_right: false
-## URxvt*scrollBar: false
-URxvt*scrollstyle: plain
+## URxvt*scrollstyle: plain
 URxvt*internalBorder: 0
 URxvt*renderFont: false
 Urxvt.secondaryScroll: true
