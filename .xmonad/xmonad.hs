@@ -8,10 +8,7 @@ import XMonad.Layout.NoBorders
 import System.IO
 
 myManageHook = composeAll
-    [ className =? "Gimp"       --> doFloat
-     ,className =? "Skype"      --> doFloat
-     ,className =? "Empathy"    --> doFloat
-    ]
+    [ className =? "Gimp" --> doFloat ]
 
 main = do
     xmproc <- spawnPipe "xmobar"
