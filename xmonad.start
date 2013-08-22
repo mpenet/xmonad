@@ -10,6 +10,10 @@ if xinput list | grep "TouchPad"; then
     xinput --set-prop  "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 fi
 
+xmodmap -e 'remove Lock = Caps_Lock'
+xmodmap -e 'keysym Caps_Lock = Control_L'
+xmodmap -e 'add Control = Control_L'
+
 xsetroot -cursor_name left_ptr -solid black
 
 xset s off # Disable X windows screen saver
