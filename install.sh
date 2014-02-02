@@ -5,7 +5,7 @@ fi
 
 DIR=$(cd $(dirname "$0"); pwd)
 
-sudo apt-get install xmonad trayer dmenu xmobar -y
+sudo apt-get install xmonad trayer dmenu xmobar rxvt-unicode-256color -y
 
 mv /usr/share/xsessions/xmonad.start /usr/share/xsessions/xmonad.start.original
 
