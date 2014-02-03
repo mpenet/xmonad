@@ -14,4 +14,4 @@ ln -s $DIR/$1/.xmobarrc ~/.xmobarrc
 ln -s $DIR/.Xresources ~/.Xresources
 ln -s $DIR/.Xresources ~/.Xdefaults
 
-echo "[Desktop Entry]\nEncoding=UTF-8\nName=XMonad.mpenet\nComment=Lightweight tiling window manager\nExec=$DIR/$1/xmonad.start\nIcon=xmonad.png\nType=XSession" > /usr/share/xsessions/xmonad-$1.desktop ;
+echo "[Desktop Entry]\nEncoding=UTF-8\nName=XMonad.mpenet\nComment=Lightweight tiling window manager\nExec=$DIR/$1/xmonad.start\nIcon=xmonad.png\nType=XSession" | sudo tee -a /usr/share/xsessions/xmonad-$1.desktop ;
