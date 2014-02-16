@@ -11,7 +11,9 @@ mv /usr/share/xsessions/xmonad.start /usr/share/xsessions/xmonad.start.original
 
 ln -s $DIR/.xmonad ~/.xmonad
 ln -s $DIR/$1/.xmobarrc ~/.xmobarrc
+ln -s $DIR/$1/.synaptiks ~/.synaptiks
 ln -s $DIR/.Xresources ~/.Xresources
 ln -s $DIR/.Xresources ~/.Xdefaults
+ln -s $DIR/.gtkrc-2.0 ~/.gtkrc-2.0
 
 echo "[Desktop Entry]\nEncoding=UTF-8\nName=XMonad.$1\nComment=Lightweight tiling window manager\nExec=$DIR/$1/xmonad.start\nIcon=xmonad.png\nType=XSession" | sudo tee -a /usr/share/xsessions/xmonad-$1.desktop ;

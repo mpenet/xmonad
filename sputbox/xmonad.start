@@ -11,6 +11,8 @@ xmodmap -e 'add Control = Control_L'
 
 xsetroot -cursor_name left_ptr -solid black
 
+synaptikscfg load ~/.synaptiks
+
 xset s off # Disable X windows screen saver
 xset -dpms # Disable display power management system
 
