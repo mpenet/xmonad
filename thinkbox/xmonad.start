@@ -25,6 +25,6 @@ xrandr --output DP3 --off --output DP2 --off --output DP1 --off --output HDMI3 -
 
 trayer --edge top --align right --height 13 --padding 0 --transparent true --alpha 0 --widthtype percent --width 5 --tint 0x2b2b2b  --distancefrom right --distance 1 --expand true --monitor 1 &
 
-nm-applet --sm-disable &
+nm-applet --sm-disable & gnome-settings-deamon &
 
 exec xmonad
