@@ -20,6 +20,6 @@ xrandr --output HDMI1 --off --output DP1 --off --output eDP1 --mode 1920x1080 --
 
 trayer --edge top --align right --height 13 --padding 0 --transparent true --alpha 0 --widthtype percent --width 5 --tint 0x2b2b2b  --distancefrom right --distance 1 --expand true --monitor 1 &
 
-nm-applet --sm-disable & gnome-settings-daemon &
+nm-applet --sm-disable & # gnome-settings-daemon &
 
 exec xmonad
