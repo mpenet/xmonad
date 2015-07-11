@@ -8,7 +8,7 @@ Config { font = "-xos4-terminus-medium-r-normal-*-12-*-*-*-c-*-iso10646-1"
                     , Run Swap [] 100
                     , Run Network "wlan1" ["-L","0","-H","32","--normal","green","--high","red"] 10
                     , Run Network "eth0" ["-L","0","-H","32","--normal","green","--high","red"] 10
-                    , Run Battery ["-L","25","-H","75","--low","#red" ,"--high","green"] 600
+                    , Run Battery ["-L","25","-H","75","--low","red" ,"--high","green"] 600
                     , Run Date "%a %b %_d %H:%M" "date" 60
                     , Run StdinReader
                     ]
