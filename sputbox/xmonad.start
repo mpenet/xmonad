@@ -16,7 +16,9 @@ synaptikscfg load ~/.synaptiks
 xset s off # Disable X windows screen saver
 xset -dpms # Disable display power management system
 
-xrandr --output HDMI1 --off --output DP1 --off --output eDP1 --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+# xrandr --output HDMI1 --off --output DP1 --off --output eDP1 --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+
+xrandr --output HDMI1 --mode 1680x1050 --pos 1920x0 --rotate normal --output DP1 --off --output eDP1 --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
 trayer --edge top --align right --height 13 --padding 0 --transparent true --alpha 0 --widthtype percent --width 5 --tint 0x2b2b2b  --distancefrom right --distance 1 --expand true --monitor 1 &
 
