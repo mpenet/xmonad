@@ -10,6 +10,7 @@ sudo apt-get install xmonad trayer dmenu xmobar rxvt-unicode-256color -y
 mv /usr/share/xsessions/xmonad.start /usr/share/xsessions/xmonad.start.original
 
 ln -s $DIR/.xmonad ~/.xmonad
+ln -s $DIR/autokey ~/autokey
 ln -s $DIR/$1/.xmobarrc ~/.xmobarrc
 ln -s $DIR/$1/.synaptiks ~/.synaptiks
 ln -s $DIR/.Xresources ~/.Xresources
