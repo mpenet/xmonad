@@ -6,6 +6,7 @@ import XMonad.Util.EZConfig
 import XMonad.Actions.NoBorders
 import XMonad.Layout.NoBorders
 import XMonad.Hooks.SetWMName
+import qualified XMonad.StackSet as S
 import System.IO
 
 myManageHook = composeAll
@@ -29,4 +30,6 @@ main = do
         }
         `additionalKeysP`
                  [("M-b", withFocused toggleBorder)
+                 , ("M-a", windows S.focusDown)
+                 , ("M-q", windows S.focusUp)
                  ]
